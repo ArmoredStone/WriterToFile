@@ -1,14 +1,12 @@
-package pkg10;
+package com.company;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String filePath = "C:\\Downloads\\123.txt";
+        String fileSeparator = System.getProperty("file.separator");
+        String filePath = "C:"+fileSeparator+"Downloads"+fileSeparator+"123.txt";
         File file = new File(filePath);
         file.createNewFile();
         writeToFile("Привет Файл", filePath);
@@ -49,7 +47,5 @@ public class Main {
             }
 
         }
-
     }
-
 }
